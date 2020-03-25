@@ -22,6 +22,8 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+//console.log('Server running on port 3000...');
+
 http.createServer(function(req, res){
     //load html file
     if(req.url === "/"){
@@ -61,5 +63,5 @@ http.createServer(function(req, res){
 
 }).listen(3000); 
 
-/* type 'node server.js' in terminal to start the node server
+/* type 'node server.js' (or 'nodemon sever.js') in terminal to start the node server
    and on the broswer, visit the link 'localhost:3000' to access the page/site */
