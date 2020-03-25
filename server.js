@@ -24,10 +24,10 @@ const path = require('path');
 
 //console.log('Server running on port 3000...');
 
-http.createServer(function(req, res){
+http.createServer((req, res) => {
     //load html file
     if(req.url === "/"){
-        fs.readFile("./index.html", "UTF-8", function(err, html){
+        fs.readFile("./index.html", "UTF-8",(err, html) => {
             res.writeHead(200, {"Content-Type": "text/html"});
             res.end(html);
         });
